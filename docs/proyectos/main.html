@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define el conjunto de caracteres y configuración de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Fit & Walk</title>
+    <!-- Enlace a la hoja de estilos principal -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Preconecta a Google Fonts para mejorar el rendimiento al cargar las fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Enlace a la fuente "Protest Strike" desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <!-- Enlace a la librería Swiper (para los sliders) -->
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- Enlace al script de Swiper para manejar el slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+<body>
+    
+    <!-- Inicio de la cabecera -->
+    <header>
+        <!-- Menú principal con logo y enlaces -->
+        <div class="menu" id="menu">
+            <!-- Logo con el nombre de la página -->
+            <a href="" class="logo"><h1 class="logo">Fit & Walk</h1></a>
+    
+            <!-- Contenedor de enlaces del menú -->
+            <div class="contenedor-opciones">
+                <!-- Enlaces a diferentes secciones del sitio -->
+                <a class="opciones" href="">Contacto</a>
+                <a class="opciones" href="">Ubicación</a>
+                <a class="opciones" href="">Productos</a>
+                <a class="opciones" href="">Redes</a>
+            </div>
+            <!-- Submenú para el carrito de compras -->
+            <div class="submenu" id="submenu">
+                <!-- Ícono SVG que representa el carrito de compras -->
+                <a href="">
+                    <svg class="carrito" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="white">
+                        <path d="M7.308 21.116q-.633 0-1.067-.434t-.433-1.066t.433-1.067q.434-.433 1.067-.433t1.066.433t.434 1.067t-.434 1.066t-1.066.434m9.384 0q-.632 0-1.066-.434t-.434-1.066t.434-1.067q.434-.433 1.066-.433t1.067.433q.433.434.433 1.067q0 .632-.433 1.066q-.434.434-1.067.434M5.392 4.5h14.924l-4.168 7.616H8.1l-1.639 3h11.731v1H4.741l2.744-4.9L3.808 3.5H2v-1h2.442z"/>
+                    </svg>
+                </a>
+                <!-- Contenedor del carrito donde se mostrarán los productos seleccionados -->
+                <div id ="carrito">
+                    <table id="lista-carrito">
+                        <!-- Encabezado de la tabla con columnas para imagen, nombre y precio del producto -->
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de la tabla donde se añadirán los productos -->
+                        <tbody></tbody>
+                    </table>
+                    <div id="total">Total: $0.00</div> <!--elemento para mostrar el total del carrito-->
+                    <!-- Botón para vaciar el carrito -->
+                    <a href="" class="btn-vaciar" id="vaciar-carrito">Vaciar carrito</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor principal de Swiper (el slider de imágenes de productos) -->
+    <div class="swiper">
+        <!-- Contenedor de las diapositivas -->
+        <div class="swiper-wrapper">
+            <!-- Cada imagen dentro de una diapositiva del slider -->
+            <div class="swiper-slide"><img src="img/tenis-deportivos (1).jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/tenis-deportivos (2).jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/tenis-deportivos (3).jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/tenis-deportivos (4).jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/tenis-deportivos (5).jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/tenis-deportivos (6).jpg" alt=""></div>
+        </div>
+        <!-- Paginación del slider -->
+        <div class="swiper-pagination"></div>
+        <!-- Botones de navegación prev y next -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- Barra de desplazamiento del slider -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- Sección de la lista de productos disponibles -->
+    <section class="content" id="lista">
+            <!-- Primera fila de productos -->
+        <div class="productos-lista">
+            <!-- Producto individual con imagen, nombre, precio y botón para agregar al carrito -->
+            <div class = "producto-individual">
+                <img src = "img/Producto (1).jpg">
+                <h3 class="nomprodct">Conjunto Tennis</h3>
+                <p>$700</p>
+                <div class="centrarbtn">
+                    <div class="btn-agregar">     
+                        <a href="" class="agregar-carrito" data-id = "producto-1"><span>Agregar al carrito</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "producto-individual">
+                <img src = "img/Producto (2).jpg" >
+                <h3 class="nomprodct">Conjunto Pareja</h3>
+                <p>$1000</p>
+                <div class="centrarbtn">
+                    <div class="btn-agregar">     
+                        <a href="" class="agregar-carrito" data-id = "producto-2"><span>Agregar al carrito</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "producto-individual">
+                <img src = "img/Producto (3).jpg" >
+                <h3 class="nomprodct">Conjunto Black and white</h3>
+                <p>$1400</p>
+                <div class="centrarbtn">
+                    <div class="btn-agregar">     
+                        <a href="" class="agregar-carrito" data-id = "producto-3"><span>Agregar al carrito</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda fila de productos -->
+        <div class = "productos-lista">
+            <div class = "producto-individual">
+                <img src = "img/Producto (4).jpg" >
+                <h3 class="nomprodct">Conjunto Tennis Diva</h3>
+                <p>$900</p>
+                <div class="centrarbtn">
+                    <div class="btn-agregar">     
+                        <a href="" class="agregar-carrito" data-id = "producto-4"><span>Agregar al carrito</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "producto-individual">
+                <img src = "img/Producto (5).jpg" >
+                <h3 class="nomprodct">Conjunto Leggins</h3>
+                <p>$800</p>
+                <div class="centrarbtn">
+                    <div class="btn-agregar">     
+                        <a href="" class="agregar-carrito" data-id = "producto-5"><span>Agregar al carrito</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "producto-individual">
+                <img src = "img/Producto (6).jpg" >
+                <h3 class="nomprodct">Conjunto Street</h3>
+                <p>$700</p>
+                <div class="centrarbtn">
+                    <div class="btn-agregar">     
+                        <a href="" class="agregar-carrito" data-id = "producto-6"><span>Agregar al carrito</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Enlaces a los scripts que manejan las funciones del sitio -->
+    <script src="js/funciones.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html

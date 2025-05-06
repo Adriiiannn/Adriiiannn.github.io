@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Adrián Soto - Desarrollador Web Frontend">
+    <title>Adrián Soto | Desarrollador Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Adrián Soto</h1>
+        <p class="header__subtitle">Desarrollador Web & Diseñador UI</p>
+    </header>
+
+    <main>
+        <section class="hero" data-animate="fade-up">
+            <div class="hero__content">
+                <p class="hero__text">
+                    Hola, soy Adrián Soto, estudiante de Ingeniería en Software con formación en programación desde la preparatoria. 
+                    Mi enfoque principal es el desarrollo web front-end, combinando habilidades técnicas con diseño atractivo para 
+                    crear experiencias digitales memorables.
+                </p>
+            </div>
+            <img src="images/fotoperso.jpg" alt="Foto de Adrián Soto" class="hero__image">
+        </section>
+
+        <section class="about" data-animate="fade-up">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about__bio">
+                <p>
+                    Soy Adrián Soto, desarrollador web en formación con 3 años de experiencia en proyectos personales y académicos. 
+                    Mi trayectoria incluye el desarrollo de interfaces interactivas y aplicaciones web responsivas, siempre buscando 
+                    equilibrar funcionalidad y diseño estético.
+                </p>
+            </div>
+            
+            <div class="skills-container">
+                <article class="skills">
+                    <h3 class="skills__title">Mis Habilidades</h3>
+                    <div class="skills__category">
+                        <h4 class="skills__subtitle">Lenguajes de programación</h4>
+                        <ul class="skills__list">
+                            <li class="skills__item">C++</li>
+                            <li class="skills__item">JavaScript</li>
+                            <li class="skills__item">Java</li>
+                        </ul>
+                    </div>
+                    <div class="skills__category">
+                        <h4 class="skills__subtitle">Tecnologías web</h4>
+                        <ul class="skills__list">
+                            <li class="skills__item">HTML5</li>
+                            <li class="skills__item">CSS3/SASS</li>
+                            <li class="skills__item">React (en aprendizaje)</li>
+                            <li class="skills__item">ThreeJs (Curso de 2 sesiones, aun en aprendizaje)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="interests">
+                    <h3 class="interests__title">Mis Intereses</h3>
+                    <ul class="interests__list">
+                        <li class="interests__item">
+                            <strong>Desarrollo Front-end avanzado:</strong> Dominar React, Vue y animaciones CSS complejas.
+                        </li>
+                        <li class="interests__item">
+                            <strong>Diseño UX/UI:</strong> Crear experiencias intuitivas y visualmente atractivas.
+                        </li>
+                        <li class="interests__item">
+                            <strong>Crecimiento profesional:</strong> Desarrollar habilidades técnicas y blandas.
+                        </li>
+                        <li class="interests__item">
+                            <strong>Proyectos personales:</strong> Construir un portafolio diverso e impactante.
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="portfolio" data-animate="fade-up">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <article class="project">
+                <h3 class="project__title">Fit & Walk</h3>
+                <p class="project__description">
+                    Prototipo de tienda online especializada en ropa deportiva, con carrito de compras interactivo 
+                    y diseño completamente responsivo.
+                </p>
+                <div class="project__details">
+                    <div class="project__tools">
+                        <h4>Tecnologías Utilizadas:</h4>
+                        <ul>
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <li>Swiper.js para sliders</li>
+                            <li>Google Fonts</li>
+                        </ul>
+                    </div>
+                    <div class="project__features">
+                        <h4>Características:</h4>
+                        <ul>
+                            <li>Sistema de carrito de compras</li>
+                            <li>Diseño adaptativo</li>
+                            <li>Slider de productos</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="proyectos/main.html" class="project__link">Ver Proyecto</a>
+            </article>
+        </section>
+
+        <section class="contact" data-animate="fade-up">
+            <h2 class="section-title">Contacto</h2>
+            <form class="contact__form">
+                <div class="form__group">
+                    <label for="name" class="form__label">Nombre</label>
+                    <input type="text" id="name" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="message" class="form__label">Mensaje</label>
+                    <textarea id="message" class="form__textarea" required></textarea>
+                </div>
+                <button type="submit" class="form__button">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2023 Adrián Soto. Todos los derechos reservados.</p>
+        <div class="footer__social">
+            <a href="#" class="social__link">LinkedIn</a>
+            <a href="#" class="social__link">GitHub</a>
+            <a href="#" class="social__link">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+body {
+    background-color: #000000; /* Establece un color de fondo oscuro para la página */
+    overflow-x: hidden; /* Oculta el desplazamiento horizontal en la página */
+}
+
+div #total{
+    color: #ffffff; /* Establece el color del texto en blanco */
+    margin: 0 15px auto; /* Espacio horizontal*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Aplica la fuente especificada a los enlaces */
+    font-weight: 400; /* Define un grueso normal para la fuente */
+    font-style: normal; /* Aplica un estilo de fuente normal */
+}
+
+.menu {
+    display: flex; /* Permite la distribución flexible de los elementos en el menú */
+    position: absolute; /* Posiciona el menú de forma absoluta en relación al contenedor más cercano */
+    background-color: #252525; /* Asigna un color de fondo gris al menú */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho de la ventana */
+    height: 40px; /* Define la altura del menú */
+    top: 0; /* Fija la posición superior del menú en la parte superior de la ventana */
+    left: 0; /* Fija la posición izquierda del menú en el borde izquierdo de la ventana */
+    right: 0; /* Fija la posición derecha del menú en el borde derecho de la ventana */
+    padding: 20px; /* Agrega un padding interno para separar el contenido del menú */
+    align-items: center; /* Alinea verticalmente el contenido del menú */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos en la página */
+}
+
+.contenedor-opciones {
+    margin: 0 auto; /* Centra el contenedor en el medio horizontalmente */
+    margin-left: 24%; /* Agrega un margen desde la izquierda para posicionarlo adecuadamente */
+    padding: 0; /* Elimina el padding interno */
+    align-content: center; /* Alinea el contenido en el centro */
+    cursor: default; /* Cambia el cursor al predeterminado cuando está sobre el contenedor */
+}
+
+.opciones {
+    background-image: linear-gradient(90deg, rgb(0, 255, 157), rgb(0, 255, 17), rgb(0, 67, 7)); /* Agrega un gradiente de fondo horizontal a las opciones */
+    font-weight: bold; /* Hace que el texto de las opciones sea más grueso */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que se puede hacer clic */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    background-size: 0% 3px; /* Establece el tamaño inicial del gradiente de fondo */
+    background-position: left bottom; /* Posiciona el gradiente en la parte inferior izquierda */
+    transition: background-size 300ms ease-in-out; /* Transición suave del tamaño del gradiente al hacer hover */
+}
+
+.opciones:hover {
+    background-size: 100% 3px; /* Expande el gradiente de fondo al 100% en el hover */
+}
+
+.menu a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #ffffff; /* Establece el color del texto de los enlaces en blanco */
+    margin: 0 15px auto; /* Espacio horizontal entre enlaces */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Aplica la fuente especificada a los enlaces */
+    font-weight: 400; /* Define un grueso normal para la fuente */
+    font-style: normal; /* Aplica un estilo de fuente normal */
+}
+
+.carrito svg {
+    color: white; /* Cambia el color de los íconos SVG a blanco */
+    display: inline-block; /* Permite que el SVG esté en línea con otros elementos */
+    margin: 0 auto; /* Centra el ícono horizontalmente */
+    transform: translateX(-200%); /* Desplaza el ícono hacia la izquierda */
+}
+
+.logo {
+    margin: 0 auto; /* Centra el logo horizontalmente */
+    color: #ffffff; /* Define el color del logo como blanco */
+    font-family: "Protest Strike", sans-serif; /* Aplica una fuente personalizada al logo */
+    font-weight: 400; /* Define un peso normal para la fuente */
+    font-style: normal; /* Aplica un estilo de fuente normal */
+    transition: color 300ms ease-in-out; /* Transición suave de color al hacer hover */
+}
+
+.logo:hover {
+    font-size: 35px; /* Aumenta el tamaño del logo al hacer hover */
+    color: #4aff80; /* Cambia el color del logo al hacer hover */
+    margin-right: 0; /* Elimina cualquier margen derecho */
+}
+
+.submenu {
+    transform: translateX(-150%); /* Desplaza el ícono del submenú hacia la izquierda */
+    position: relative; /* Posiciona el submenú de forma relativa */
+    
+}
+
+.submenu #carrito {
+    display: none; /* Oculta el carrito inicialmente */
+    max-height: 400px; /* Establece una altura máxima para el carrito */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido supera la altura máxima */
+}
+
+.submenu:hover #carrito {
+    display: block; /* Muestra el carrito al pasar el mouse sobre el submenú */
+    position: absolute; /* Posiciona el carrito de forma absoluta dentro del submenú */
+    right: 0; /* Fija el carrito al borde derecho del submenú */
+    top: 100%; /* Coloca el carrito justo debajo del submenú */
+    z-index: 1; /* Coloca el carrito por encima de otros elementos */
+    background-color: #1e1f1fe0; /* Establece un fondo semitransparente para el carrito */
+    padding: 20px; /* Agrega padding interno para separar el contenido del borde */
+    min-width: 400px; /* Define un ancho mínimo para el carrito */
+    max-height: 400px; /* Limita la altura del carrito cuando se despliega */
+    overflow-y: auto; /* Permite el desplazamiento vertical dentro del carrito */
+    backdrop-filter: blur(10px); /* Aplica un desenfoque de fondo para mejorar la legibilidad */
+}
+
+#lista-carrito {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+th, td {
+    color: #ffffff; /* Define el color del texto en blanco para las celdas de la tabla */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Aplica la fuente especificada a las celdas de la tabla */
+    padding: 5px; /* Agrega un padding interno para mejorar la legibilidad */
+}
+
+.btn-vaciar {
+    display: block; /* Oculta el botón inicialmente */
+    padding: 10px 20px; /* Agrega padding interno para agrandar el área del botón */
+    text-decoration: none; /* Elimina el subrayado del texto del botón */
+    color: #ffffff; /* Establece el color del texto del botón en blanco */
+    background-color: #005a2d; /* Establece un fondo rojo para el botón */
+    border-radius: 5px;
+    font-weight: 800; /* Hace que el texto del botón sea más grueso */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    margin-top: 10px; /* Agrega un margen superior para separar el botón de otros elementos */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+
+
+
+.swiper {
+    display: flex; /* Permite la distribución flexible de los elementos internos */
+    flex-direction: column; /* Organiza los elementos de forma vertical */
+    align-items: center; /* Alinea el contenido en el centro */
+    justify-content: center; /* Justifica el contenido al centro verticalmente */
+    background-color: #ffffff; /* Establece un fondo blanco para el contenedor Swiper */
+    margin: 90px auto 0; /* Agrega un margen superior al contenedor Swiper */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 850px; /* Define la altura del contenedor Swiper */
+    overflow: hidden; /* Oculta el desbordamiento dentro del contenedor */
+}
+
+.swiper-wrapper {
+    display: flex; /* Permite la distribución flexible de las diapositivas */
+    align-items: center; /* Alinea el contenido de las diapositivas verticalmente */
+}
+
+.swiper-slide {
+    display: flex; /* Permite la distribución flexible de las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+}
+
+.swiper-slide img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.swiper-pagination {
+    position: absolute; /* Posiciona la paginación de forma absoluta */
+    bottom: 10px; /* Fija la posición en la parte inferior */
+    display: flex; /* Permite la distribución flexible de los puntos de paginación */
+    justify-content: center; /* Centra la paginación horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.swiper-scrollbar {
+    position: absolute; /* Posiciona la barra de desplazamiento de forma absoluta */
+    bottom: 30px; /* Fija la posición en la parte inferior */
+    width: 80%; /* Ocupa el 80% del ancho disponible */
+}
+
+.nomprodct{
+    color: #ffffff;
+}
+
+.content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Aplica la fuente especificada a los enlaces */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    background-image: url(pexels-turgay-koca-405356598-15273714.jpg);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 60%; /* Ocupa el 60% de la altura de la página */
+    padding-top: 10px; /* Agrega un padding superior de 10px */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.content p {
+    width: 100px;
+    border-radius: 20px;
+    font-size: 18px; /* Define el tamaño de la fuente para el párrafo */
+    text-align: center; /* Centra el texto dentro del párrafo */
+    color: #ffffff; /* Establece el color del texto en blanco */
+    background-color: #4E4B5076; /* Establece un fondo semitransparente de color gris */
+    backdrop-filter: blur(1px); /* Aplica un desenfoque de fondo para mejorar la legibilidad del texto */
+    padding: 5px; /* Agrega un padding interno de 5px alrededor del texto */
+    margin: 0 auto; /* Centra el párrafo horizontalmente con margen automático */
+}
+
+
+.productos-lista {
+    display: flex; /* Permite la distribución flexible de los productos */
+    justify-content: space-around; /* Espacia los productos equitativamente */
+    align-items: stretch; /* Asegura que los productos tengan la misma altura */
+    margin: 0 auto; /* Centra la lista de productos horizontalmente */
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    gap: 20px; /* Agrega un espaciado entre productos */
+}
+
+.centrarbtn {
+    padding: 0; /* Elimina el padding interno */
+    margin: 5px auto; /* Centra el botón horizontalmente con un pequeño margen */
+    display: flex; /* Permite la distribución flexible del botón */
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Centra el botón verticalmente */
+    min-height: 10px; /* Define una altura mínima para el botón */
+    font-size: 24px; /* Establece el tamaño de la fuente del botón */
+}
+
+.btn-agregar {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define la fuente del botón */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 70px; /* Define la altura del botón */
+    display: flex; /* Permite la distribución flexible del contenido del botón */
+    justify-content: center; /* Centra el contenido del botón horizontalmente */
+    align-items: center; /* Centra el contenido del botón verticalmente */
+    flex-direction: column; /* Organiza el contenido del botón de forma vertical */
+}
+
+.btn-agregar a {
+    background-color: #00000084;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border: 2px solid #4aff80; /* Agrega un borde negro de 2px al enlace */
+    padding: 15px; /* Agrega un padding interno de 15px al enlace */
+    color: #ffffff; /* Establece el color del texto del enlace como negro */
+    letter-spacing: 2px; /* Aumenta el espacio entre letras en el enlace */
+    position: relative; /* Posiciona el enlace de forma relativa para efectos */
+    display: inline-block; /* Permite que el enlace esté en línea */
+}
+
+span {
+    position: relative; /* Posiciona el span de forma relativa */
+    z-index: 3; /* Coloca el span por encima de otros elementos */
+}
+
+.btn-agregar a::before {
+    content: ""; /* Añade un contenido vacío antes del enlace */
+    position: absolute; /* Posiciona el contenido de forma absoluta */
+    top: 5px; /* Establece la posición superior a 5px */
+    left: -2px; /* Establece la posición izquierda a -2px */
+    width: calc(100% + 6px); /* Calcula el ancho del contenido */
+    height: calc(100% - 10px); /* Calcula la altura del contenido */
+    background-color: #000000; /* Define un fondo blanco */
+    transition: all 0.5s ease-in-out; /* Aplica una transición suave */
+    transform: scaleY(1); /* Establece la escala vertical inicial */
+}
+
+.btn-agregar a:hover::before {
+    transform: scaleY(0); /* Reduce la escala vertical a 0 al hacer hover */
+}
+
+.btn-agregar a::after {
+    content: ""; /* Añade un contenido vacío después del enlace */
+    position: absolute; /* Posiciona el contenido de forma absoluta */
+    left: 5px; /* Establece la posición izquierda a 5px */
+    top: -5px; /* Establece la posición superior a -5px */
+    width: calc(100% - 10px); /* Calcula el ancho del contenido */
+    height: calc(100% + 10px); /* Calcula la altura del contenido */
+    background-color: #000000; /* Define un fondo blanco */
+    transition: all 0.5s ease-in-out; /* Aplica una transición suave */
+    transform: scaleX(1); /* Establece la escala horizontal inicial */
+}
+
+.btn-agregar a:hover::after {
+    transform: scaleX(0); /* Reduce la escala horizontal a 0 al hacer hover */
+}
+
+.producto-individual {
+    border-radius: 10px;
+    background-color: #000000d7;
+    backdrop-filter: blur(5px);
+    flex: 1; /* Permite que los productos ocupen el mismo espacio disponible */
+    margin: 10px auto; /* Agrega un margen de 10px alrededor y centra horizontalmente */
+    padding: 10px; /* Agrega un padding interno de 10px */
+}
+
+.producto-individual img {
+    border-radius: 10px;
+    
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 600px; /* Fija una altura uniforme para las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen y recorta si es necesario */
+}
